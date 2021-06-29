@@ -1,3 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;600&display=swap");
 body {
-	background-color: aqua;
+  background-color: rgb(246, 246, 235);
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+}
+.header-content {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  ul {
+    display: flex;
+
+    li {
+      padding: 0 15px;
+      list-style: none;
+      cursor: pointer;
+    }
+  }
+
+  .header-center-section {
+    font-size: 2rem;
+    letter-spacing: 6px;
+    cursor: pointer;
+  }
+  .header-rigth-section {
+    padding: 0 40px 0 0;
+  }
+}
+a {
+  outline: none;
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0 15px;
 }
