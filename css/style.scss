@@ -21,6 +21,8 @@ body {
       padding: 0 15px;
       list-style: none;
       cursor: pointer;
+	  display: inline-block;
+	  position: relative;
     }
   }
 
@@ -40,4 +42,20 @@ a {
   font-size: 1rem;
   font-weight: 400;
   padding: 0 15px;
+}
+.custom-underline:after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -5px;
+    left: 8px;
+    background-color: black;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+.custom-underline:hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }

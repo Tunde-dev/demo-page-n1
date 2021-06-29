@@ -31,6 +31,8 @@ body {
   padding: 0 15px;
   list-style: none;
   cursor: pointer;
+  display: inline-block;
+  position: relative;
 }
 
 .header-content .header-center-section {
@@ -50,5 +52,30 @@ a {
   font-size: 1rem;
   font-weight: 400;
   padding: 0 15px;
+}
+
+.custom-underline:after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 8px;
+  background-color: black;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.custom-underline:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
 }
 /*# sourceMappingURL=style.css.map */
