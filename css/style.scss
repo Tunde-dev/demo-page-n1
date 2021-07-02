@@ -1,61 +1,129 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;600&display=swap");
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(246, 246, 235);
   font-family: "Jost", sans-serif;
   font-size: 16px;
 }
+ul {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    list-style: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    margin: 0 15px;
+  }
+}
+.header-top-bar {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  color: #eeeeee;
+  a {
+    color: #eeeeee;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
 .header-content {
-  background-color: white;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 0;
-
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-
-  ul {
-    display: flex;
-
-    li {
-      padding: 0 15px;
-      list-style: none;
-      cursor: pointer;
-	  display: inline-block;
-	  position: relative;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  .left-menu-section {
+    a {
+      color: black;
     }
   }
-
   .header-center-section {
-    font-size: 2rem;
-    letter-spacing: 6px;
     cursor: pointer;
+    img {
+      height: 24px;
+    }
   }
   .header-rigth-section {
     padding: 0 40px 0 0;
+    a {
+      color: black;
+      margin: 0 15px;
+    }
   }
 }
 a {
   outline: none;
   text-decoration: none;
-  color: black;
   font-size: 1rem;
   font-weight: 400;
-  padding: 0 15px;
 }
 .custom-underline:after {
-    content: "";
-    position: absolute;
-    width: 80%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -5px;
-    left: 8px;
-    background-color: black;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
 .custom-underline:hover:after {
-	transform: scaleX(1);
-	transform-origin: bottom left;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.sticky + main {
+  padding-top: 60px;
+}
+.slide-menu {
+  background: center / cover no-repeat
+    url("/assets/images/curly_hair_girl-1.webp");
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
+
+  .small-banner {
+    background-color: black;
+    color: white;
+    height: 24px;
+    border-radius: 3px;
+    padding: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 4.2rem;
+    font-weight: 400;
+  }
+  a {
+    color: black;
+    position: relative;
+  }
 }
