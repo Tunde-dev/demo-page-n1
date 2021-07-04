@@ -28,6 +28,13 @@ ul li {
   margin: 0 15px;
 }
 
+.center {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
 .header-top-bar {
   background-color: black;
   display: -webkit-box;
@@ -168,5 +175,69 @@ a {
 .slide-menu a {
   color: black;
   position: relative;
+}
+
+.top-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 50px 0;
+  background-color: white;
+  border-bottom: silver;
+}
+
+.top-wrapper .grow {
+  -webkit-transition: all 0.45s linear;
+  transition: all 0.45s linear;
+  overflow: hidden;
+}
+
+.top-wrapper .grow:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.top-wrapper .tw-1-coloumn {
+  background: center/cover no-repeat url(/assets/images/banner-shirt2-768x976.jpg.webp);
+}
+
+.top-wrapper .tw-2-coloumn {
+  background: center/cover no-repeat url(/assets/images/banner-shirt1-768x976.jpg.webp);
+}
+
+.top-wrapper > div {
+  background-color: #c7ab62;
+  height: 450px;
+  width: 350px;
+  margin: 15px;
+}
+
+.top-wrapper h3 {
+  font-size: 1.8rem;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.top-wrapper p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.top-wrapper a {
+  margin-top: 1.4rem;
+  color: #282828;
+  background-color: white;
+  padding: .75rem 1.75rem;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.top-wrapper a:hover {
+  opacity: .82;
 }
 /*# sourceMappingURL=style.css.map */

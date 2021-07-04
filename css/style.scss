@@ -23,6 +23,11 @@ ul {
     margin: 0 15px;
   }
 }
+.center {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
 .header-top-bar {
   background-color: black;
   display: flex;
@@ -126,4 +131,57 @@ a {
     color: black;
     position: relative;
   }
+}
+.top-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: white;
+  border-bottom: silver;
+
+  .grow {
+    transition: all 0.45s linear;
+    overflow: hidden;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .tw-1-coloumn {
+    background: center / cover no-repeat
+      url(/assets/images/banner-shirt2-768x976.jpg.webp);
+  }
+  .tw-2-coloumn {
+    background: center / cover no-repeat
+      url(/assets/images/banner-shirt1-768x976.jpg.webp);
+  }
+  & > div {
+    background-color: #c7ab62;
+    height: 450px;
+    width: 350px;
+    margin: 15px;
+  }
+  h3 {
+    text-shadow: 0 0 7px rgb(0 0 0 / 25%);
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  p {
+    color: rgba(255,255,255,.7);
+  }
+  a {
+    margin-top: 1.4rem;
+    color:#282828;
+    background-color: white;
+    padding: .75rem 1.75rem;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+      opacity: .82;
+    }
+  }
+  
 }
