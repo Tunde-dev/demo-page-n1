@@ -393,6 +393,10 @@ a {
   border-bottom: 1px solid #ebebeb;
 }
 
+.top-wrapper > div {
+  overflow: hidden;
+}
+
 .top-wrapper .grow {
   -webkit-transition: all 0.45s linear;
   transition: all 0.45s linear;
