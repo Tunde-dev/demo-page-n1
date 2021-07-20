@@ -13,7 +13,7 @@
     <title>Demo page N1</title>
   </head>
   <body>
-    <header>
+    <!--<header class="responsive-header">
       <div class="header-top-bar">
         <ul>
           <li>
@@ -36,13 +36,55 @@
       <div class="header-content">
         <div class="header-left-section">
           <nav class="left-menu-section">
-            <ul>
-              <li><i class="fas fa-bars"></i></li>
-              <li><a class="custom-underline" href="http://">Main</a></li>
-              <li><a class="custom-underline" href="http://">Shop</a></li>
-              <li><a class="custom-underline" href="http://">Product</a></li>
-              <li><a class="custom-underline" href="http://">Pages</a></li>
-              <li><a class="custom-underline" href="http://">Journal</a></li>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+              <li class="nav-item search-field">
+                <input type="search" placeholder="Search products..." />
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-underline" href="http://">Main</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-underline" href="http://">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-underline" href="http://">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-underline" href="http://">Pages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link custom-underline" href="http://">Journal</a>
+              </li>
+              <li class="nav-item login">
+                <a href="http://">Login</a>
+                <i class="far fa-user"></i>
+              </li>
+              <li class="nav-item cart">
+                <a href="http://">Cart</a>
+                <i class="fas fa-shopping-cart"></i>
+              </li>
+              <li class="nav-item wishlist">
+                <a href="http://">Wishlist</a>
+                <i class="far fa-heart"></i>
+              </li>
+              <li class="nav-item language">
+                <a href="http://">Language</a>
+                <select>
+                  <option value="1">English</option>
+                  <option value="2">Deutsch</option>
+                  <option value="3">Hungarian</option>
+                </select>
+              </li>
+              <li class="nav-item social">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+              </li>
             </ul>
           </nav>
         </div>
@@ -50,11 +92,11 @@
           <img src="/assets/images/logo-light.png.webp" alt="logo" />
         </figure>
         <div class="header-rigth-section">
-          <a class="right-menu-section" href="http://">Login</a>
-          <a class="right-menu-section" href="http://"
-            ><i class="fas fa-search"></i
+          <a class="right-menu-section d-none" href="http://">Login</a>
+          <a class="right-menu-section d-none" href="http://"
+            ><i class="fas fa-search d-none"></i
           ></a>
-          <a class="right-menu-section" href="http://"
+          <a class="right-menu-section d-none" href="http://"
             ><i class="far fa-heart"></i
           ></a>
           <a class="right-menu-section" href="http://"
@@ -62,6 +104,119 @@
           ></a>
         </div>
       </div>
+    </header>-->
+    <header>
+      <div class="header-top-bar">
+        <ul>
+          <li>
+            <a href="http://"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="http://"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="http://"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li><a href="http://">About us</a></li>
+          <li><a href="http://">WishList</a></li>
+          <li><a href="http://">Contact</a></li>
+        </ul>
+        <div style="display: flex; align-items: center; padding: 0 50px">
+          English
+        </div>
+      </div>
+      <nav class="main-nav">
+        <div class="header-left-section">
+          <div class="left-menu-section">
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+            <ul class="d-none d-md-block">
+              <li>
+                <a class="custom-underline" href="http://">Main</a>
+              </li>
+              <li>
+                <a class="custom-underline" href="http://">Shop</a>
+              </li>
+              <li>
+                <a class="custom-underline" href="http://">Product</a>
+              </li>
+              <li>
+                <a class="custom-underline" href="http://">Pages</a>
+              </li>
+              <li>
+                <a class="custom-underline" href="http://">Journal</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <figure class="header-center-section">
+          <img src="/assets/images/logo-light.png.webp" alt="logo" />
+        </figure>
+        <div class="header-rigth-section">
+          <a class="right-menu-section d-none d-md-block" href="http://">Login</a>
+          <a class="right-menu-section d-none d-md-block" href="http://"
+            ><i class="fas fa-search d-none d-md-block"></i
+          ></a>
+          <a class="right-menu-section d-none d-md-block" href="http://"
+            ><i class="far fa-heart"></i
+          ></a>
+          <a class="right-menu-section" href="http://"
+            ><i class="fas fa-shopping-cart"></i
+          ></a>
+        </div>
+      </div>
+      </nav>
+      <nav class="offcanvas">
+        <i class="close-nav far fa-times-circle"></i>
+        <ul class="nav-menu">
+          <li class="nav-item search-field">
+            <input type="search" placeholder="Search products..." />
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-underline toUpper" href="http://">Main</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-underline toUpper" href="http://">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-underline toUpper" href="http://">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-underline toUpper" href="http://">Pages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-underline toUpper" href="http://">Journal</a>
+          </li>
+          <li class="nav-item login">
+            <a href="http://">Login</a>
+            <i class="far fa-user"></i>
+          </li>
+          <li class="nav-item cart">
+            <a href="http://">Cart</a>
+            <i class="fas fa-shopping-cart"></i>
+          </li>
+          <li class="nav-item wishlist">
+            <a href="http://">Wishlist</a>
+            <i class="far fa-heart"></i>
+          </li>
+          <li class="nav-item language">
+            <a href="http://">Language</a>
+            <select>
+              <option value="1">English</option>
+              <option value="2">Deutsch</option>
+              <option value="3">Hungarian</option>
+            </select>
+          </li>
+          <li class="nav-item social">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
       <section class="slide-menu">
@@ -98,10 +253,40 @@
           </div>
         </div>
       </section>
+      <section class="third-section">
+        <div class="center ta-center">
+          <h2>Best Selling</h2>
+          <p>
+            Bushwick blue bottle photo booth copper mug marfa craft beer
+            pour-over swag subway tile organic cloud bread.
+          </p>
+        </div>
+        <div>
+          <div>
+            <figure></figure>
+          </div>
+          <div></div>
+          <div></div>
+        </div>
+      </section>
       <section></section>
       <section></section>
-      <section></section>
-      <section></section>
+      <section class="bottom-wrapper">
+        <div class="bw-title">
+          <div class="ta-center">
+            <h2>Visit Us</h2>
+            <p>
+              Stop by our stores to learn the stories behind our products, get a
+              personal styling session, or shop the latest in person. See our
+              <a class="custom-underline" href="http://">store locations.</a>
+            </p>
+          </div>
+        </div>
+
+        <figure class="center">
+          <img src="/assets/images/boutique.jpg.webp" alt="" />
+        </figure>
+      </section>
     </main>
     <footer></footer>
 
