@@ -53,6 +53,18 @@
       padding-right: 40px;
     }
   }
+  .fourth-section {
+    .testimonial-wrapper {
+      max-width: 600px;
+      margin: auto;
+      p {
+        order: 2;
+      }
+      .testimonial-img {
+        order: 3;
+      }
+    }
+  }
 }
 
 @media (min-width: 1200px) {
@@ -294,8 +306,8 @@ a {
   background-color: white;
   border-bottom: 1px solid #ebebeb;
 
-  >div {
-    overflow:hidden
+  > div {
+    overflow: hidden;
   }
   .grow {
     transition: all 0.45s linear;
@@ -375,5 +387,45 @@ a {
   a {
     color: black;
     position: relative;
+  }
+}
+.fourth-section {
+  background-color: #f1e8df;
+  padding: 60px 30px;
+  color: #282828;
+  .testimonial-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    order: 1;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    font-weight: 400;
+    order: 3;
+  }
+  .testimonial-img {
+    background-image: url("/assets/images/woman-abstract-b1-150x150.jpg.webp");
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 20px auto;
+    order: 2;
+  }
+  .testimonial-author {
+    order: 4;
+    p {
+      font-size: 1rem;
+      margin: 5px;
+      font-weight: 600;
+    }
+    span {
+      color: #686868;
+    }
   }
 }
