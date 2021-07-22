@@ -52,7 +52,7 @@ window.addEventListener("load", () => {
   slideshowContainer.addEventListener("mouseleave", resume)
 })
 
-const plusSlides = (n) => {
+function plusSlides(n) {
   clearInterval(myTimer);
   if (n < 0) {
     showSlides(slideIndex -= 1)
