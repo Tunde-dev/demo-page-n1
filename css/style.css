@@ -17,6 +17,9 @@
   .ts-wrapper figure {
     width: 260px !important;
   }
+  .fs-wrapper figure {
+    width: 240px !important;
+  }
 }
 
 @media (min-width: 992px) {
@@ -90,6 +93,9 @@
   .ts-wrapper figure {
     width: 310px !important;
   }
+  .fs-wrapper figure {
+    width: 285px !important;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -98,6 +104,9 @@
   }
   .ts-wrapper figure {
     width: 350px !important;
+  }
+  .fs-wrapper figure {
+    width: 355px !important;
   }
 }
 
@@ -483,13 +492,15 @@ a {
 }
 
 .third-section,
+.fifth-section,
 .bottom-wrapper {
   background-color: white;
-  padding: 0 10px;
+  padding: 30px 10px;
   line-height: 1.7;
 }
 
 .third-section h2,
+.fifth-section h2,
 .bottom-wrapper h2 {
   color: #282828;
   font-weight: 400;
@@ -498,6 +509,7 @@ a {
 }
 
 .third-section p,
+.fifth-section p,
 .bottom-wrapper p {
   color: #686868;
 }
@@ -515,11 +527,48 @@ a {
   margin: auto;
 }
 
-.third-section .ts-wrapper .products {
+.third-section .ts-wrapper figure .actions-wrapper {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.third-section .ts-wrapper figure .actions-wrapper a {
+  color: #777;
+  margin: 5px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  overflow: hidden;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.7);
+  width: 36px;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.third-section .ts-wrapper figure .actions-wrapper a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #282828;
+}
+
+.products {
   margin: 20px 7.5px;
 }
 
-.third-section .ts-wrapper .products .products-inner-animation:hover {
+.products .products-inner-animation .actions-wrapper {
+  opacity: 0;
+}
+
+.products .products-inner-animation:hover {
   -webkit-transition: opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.65s;
   transition: opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.65s;
   transition: transform 0.65s, opacity 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -532,14 +581,18 @@ a {
           animation: none;
 }
 
-.third-section .ts-wrapper .products .products-inner-animation:hover figure {
+.products .products-inner-animation:hover figure {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   -webkit-transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.third-section .ts-wrapper .products .products-inner-animation:hover img:first-child {
+.products .products-inner-animation:hover figure .actions-wrapper {
+  opacity: 1;
+}
+
+.products .products-inner-animation:hover img:first-child {
   -webkit-transform: scale(1.05, 1.05);
           transform: scale(1.05, 1.05);
   -webkit-backface-visibility: hidden;
@@ -550,34 +603,34 @@ a {
   transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.third-section .ts-wrapper .products .products-inner-animation:hover .product-thumbnail-hover {
+.products .products-inner-animation:hover .product-thumbnail-hover {
   -webkit-transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.third-section .ts-wrapper .products .products-inner-animation figure {
+.products .products-inner-animation figure {
   margin: auto;
   width: 160px;
 }
 
-.third-section .ts-wrapper .products .products-inner-animation figure a {
+.products .products-inner-animation figure a {
   position: relative;
   display: block;
   overflow: hidden;
 }
 
-.third-section .ts-wrapper .products .products-inner-animation figure a .product-thumbnail-hover {
+.products .products-inner-animation figure a .product-thumbnail-hover {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
 }
 
-.third-section .ts-wrapper .products .products-inner-animation figure a:hover img:last-child {
+.products .products-inner-animation figure a:hover img:last-child {
   opacity: 1;
 }
 
-.third-section .ts-wrapper .products .products-inner-animation figure a img {
+.products .products-inner-animation figure a img {
   width: 100%;
   aspect-ratio: auto 450 / 450;
   -webkit-backface-visibility: hidden;
@@ -590,21 +643,15 @@ a {
           transform: scale(1.05, 1.05);
 }
 
-.third-section .ts-wrapper .products .products-inner-animation figure a .action-wrapper {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-}
-
-.third-section .ts-wrapper .products .product-title h3 {
+.products .product-title h3 {
   margin-bottom: 0;
 }
 
-.third-section .ts-wrapper .products .product-title a {
+.products .product-title a {
   color: #282828;
 }
 
-.third-section .ts-wrapper .products .product-title span {
+.products .product-title span {
   color: #777777;
 }
 
@@ -745,6 +792,69 @@ a {
   to {
     opacity: 1;
   }
+}
+
+.fifth-section .fs-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1480px;
+  margin: auto;
+}
+
+.fifth-section .fs-wrapper .products-inner-animation {
+  width: 100%;
+}
+
+.fifth-section .fs-wrapper .products-inner-animation .actions-wrapper {
+  bottom: 30px;
+  width: 100%;
+  height: 54px;
+  position: absolute;
+}
+
+.fifth-section .fs-wrapper .products-inner-animation .actions-wrapper > div {
+  width: 160px;
+  height: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 5px;
+}
+
+.fifth-section .fs-wrapper .products-inner-animation .actions-wrapper > div .border {
+  width: 1px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.fifth-section .fs-wrapper .products-inner-animation .actions-wrapper > div a {
+  padding: 13px 20px;
+  color: #777;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  overflow: hidden;
+}
+
+.fifth-section .fs-wrapper .products-inner-animation .actions-wrapper > div a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #282828;
 }
 
 .bottom-wrapper {
