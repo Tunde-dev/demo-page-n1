@@ -342,7 +342,7 @@ a {
 }
 .slide-menu {
   background: center / cover no-repeat
-    url("/assets/images/curly_hair_girl-1.webp");
+    url("../assets/images/curly_hair_girl-1.webp");
   height: 100vh;
   display: flex;
   align-items: center;
@@ -388,11 +388,11 @@ a {
   }
   .tw-1-coloumn {
     background: center / cover no-repeat
-      url("/assets/images/banner-shirt2-768x976.jpg.webp");
+      url("../assets/images/banner-shirt2-768x976.jpg.webp");
   }
   .tw-2-coloumn {
     background: center / cover no-repeat
-      url("/assets/images/banner-shirt1-768x976.jpg.webp");
+      url("../assets/images/banner-shirt1-768x976.jpg.webp");
   }
   & > div {
     background-color: #c7ab62;
@@ -575,10 +575,10 @@ a {
       order: 2;
     }
     .img-1 {
-      background-image: url("/assets/images/woman-abstract-b1-150x150.jpg.webp");
+      background-image: url("../assets/images/woman-abstract-b1-150x150.jpg.webp");
     }
     .img-2 {
-      background-image: url("/assets/images/men-shirt-a1-150x150.jpg.webp");
+      background-image: url("../assets/images/men-shirt-a1-150x150.jpg.webp");
     }
     .testimonial-author {
       order: 4;
