@@ -428,7 +428,7 @@ a {
 }
 
 .slide-menu {
-  background: center/cover no-repeat url("/assets/images/curly_hair_girl-1.webp");
+  background: center/cover no-repeat url("../assets/images/curly_hair_girl-1.webp");
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -494,11 +494,11 @@ a {
 }
 
 .top-wrapper .tw-1-coloumn {
-  background: center/cover no-repeat url(/assets/images/banner-shirt2-768x976.jpg.webp);
+  background: center/cover no-repeat url("../assets/images/banner-shirt2-768x976.jpg.webp");
 }
 
 .top-wrapper .tw-2-coloumn {
-  background: center/cover no-repeat url(/assets/images/banner-shirt1-768x976.jpg.webp);
+  background: center/cover no-repeat url("../assets/images/banner-shirt1-768x976.jpg.webp");
 }
 
 .top-wrapper > div {
@@ -743,11 +743,11 @@ a {
 }
 
 .fourth-section .testimonial-wrapper .img-1 {
-  background-image: url("/assets/images/woman-abstract-b1-150x150.jpg.webp");
+  background-image: url("../assets/images/woman-abstract-b1-150x150.jpg.webp");
 }
 
 .fourth-section .testimonial-wrapper .img-2 {
-  background-image: url("/assets/images/men-shirt-a1-150x150.jpg.webp");
+  background-image: url("../assets/images/men-shirt-a1-150x150.jpg.webp");
 }
 
 .fourth-section .testimonial-wrapper .testimonial-author {
