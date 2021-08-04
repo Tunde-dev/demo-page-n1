@@ -20,6 +20,47 @@
   .fs-wrapper figure {
     width: 240px !important;
   }
+  .footer-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .footer-menu .footer-menu-wrapper:nth-child(4) {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .sign-up-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sign-up-container .sign-up-form {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .sign-up-container .sign-up-form input {
+    margin-right: 10px;
+    width: 270px;
+  }
+  .sign-up-container .sign-up-form .submit-button {
+    width: 130px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -493,7 +534,8 @@ a {
 
 .third-section,
 .fifth-section,
-.bottom-wrapper {
+.bottom-wrapper,
+.sign-up-container {
   background-color: white;
   padding: 30px 10px;
   line-height: 1.7;
@@ -501,7 +543,8 @@ a {
 
 .third-section h2,
 .fifth-section h2,
-.bottom-wrapper h2 {
+.bottom-wrapper h2,
+.sign-up-container h2 {
   color: #282828;
   font-weight: 400;
   line-height: 1.2;
@@ -510,7 +553,8 @@ a {
 
 .third-section p,
 .fifth-section p,
-.bottom-wrapper p {
+.bottom-wrapper p,
+.sign-up-container p {
   color: #686868;
 }
 
@@ -811,6 +855,10 @@ a {
   width: 100%;
 }
 
+.fifth-section .fs-wrapper .products-inner-animation figure {
+  position: relative;
+}
+
 .fifth-section .fs-wrapper .products-inner-animation .actions-wrapper {
   bottom: 30px;
   width: 100%;
@@ -879,5 +927,106 @@ a {
 .bottom-wrapper a {
   color: black;
   position: relative;
+}
+
+footer {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin: auto;
+}
+
+footer .footer-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .footer-menu-wrapper:nth-child(4) {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-menu-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  color: #686868;
+}
+
+footer .footer-menu-wrapper h6 {
+  margin-bottom: 10px;
+  padding: 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: inherit;
+  line-height: 1.2;
+  font-size: 1rem;
+}
+
+footer .footer-menu-wrapper a {
+  position: relative;
+  margin: 0 0 20px;
+  color: #686868;
+}
+
+footer .footer-menu-wrapper a i {
+  color: #282828;
+}
+
+footer .footer-menu-wrapper .social-icons {
+  margin-top: 15px;
+}
+
+footer .footer-menu-wrapper .social-icons a {
+  padding: 10px;
+}
+
+footer .sign-up-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px auto;
+  max-width: 360px;
+  width: 100%;
+}
+
+footer .sign-up-form input {
+  width: 100%;
+  font-size: 1em;
+  line-height: 1.6;
+  outline: 0;
+  padding: 0.75rem;
+  height: calc(2.15em + 0.975rem + 4px);
+  border: 2px solid black;
+}
+
+footer .sign-up-form .submit-button {
+  background-color: #282828;
+  text-align: center;
+  color: white;
+  margin: 10px 0 0;
+  cursor: pointer;
+}
+
+footer .sign-up-form .submit-button:hover {
+  opacity: 0.82;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */
