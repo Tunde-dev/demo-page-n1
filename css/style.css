@@ -378,10 +378,11 @@ ul li {
 
 .main-nav .header-center-section {
   cursor: pointer;
+  margin: 0;
 }
 
 .main-nav .header-center-section img {
-  height: 24px;
+  height: 50px;
 }
 
 .main-nav .header-rigth-section {
