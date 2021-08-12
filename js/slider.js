@@ -40,7 +40,6 @@ class Slider {
   }
 
   next() {
-    console.log("next");
     if (this.isSliding) return;
     this.isSliding = true;
     this.sliderItems[this.nextItemIndex].classList.add("next-item");

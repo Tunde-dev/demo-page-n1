@@ -484,6 +484,10 @@ a {
         flex-direction: column;
         justify-content: center;
         position: relative;
+
+        a {
+          position: relative !important;
+        }
       }
     }
     .slide-1 {
@@ -514,8 +518,7 @@ a {
     }
     a {
       color: black;
-      width: max-content;
-      overflow: hidden;
+      max-width: max-content;
     }
   }
 }

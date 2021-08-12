@@ -600,6 +600,10 @@ a {
   position: relative;
 }
 
+.slide-menu .slider .slider-item > div a {
+  position: relative !important;
+}
+
 .slide-menu .slider .slide-1 {
   background: center/cover no-repeat url("../assets/images/curly_hair_girl-1.webp");
 }
@@ -637,10 +641,9 @@ a {
 
 .slide-menu .slider a {
   color: black;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  overflow: hidden;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 
 .top-wrapper {
