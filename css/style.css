@@ -61,6 +61,16 @@
   .sign-up-container .sign-up-form .submit-button {
     width: 130px;
   }
+  .slide-menu .slider-item {
+    padding: 0 100px;
+  }
+  .slider-control-next {
+    right: 16px;
+  }
+  .slider-control-prev,
+  .slider-control-next {
+    margin: -22px 20px 0 36px;
+  }
 }
 
 @media (min-width: 992px) {
@@ -112,21 +122,26 @@
   .main-nav .header-rigth-section {
     padding-right: 40px;
   }
-  .fourth-section .slideshow-container {
+  .slide-menu .slider-item > div {
+    margin: 0 50px;
+  }
+  .fourth-section .slider {
     width: 800px;
     margin: auto;
     position: relative;
   }
-  .fourth-section .slideshow-container .testimonial-wrapper {
-    max-width: 600px;
+  .fourth-section .slider .slider-item {
     margin: auto;
   }
-  .fourth-section .slideshow-container .testimonial-wrapper p {
+  .fourth-section .slider .slider-item > div {
+    padding: 20px;
+  }
+  .fourth-section .slider .slider-item > div p {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
   }
-  .fourth-section .slideshow-container .testimonial-wrapper .testimonial-img {
+  .fourth-section .slider .slider-item > div .testimonial-img {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
@@ -428,21 +443,181 @@ a {
           transform-origin: bottom left;
 }
 
-.slide-menu {
-  background: center/cover no-repeat url("../assets/images/curly_hair_girl-1.webp");
-  height: 100vh;
+.slider .slider-item.active,
+.slider .slider-item.prev-item,
+.slider .slider-item.next-item {
+  display: block;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.slider .slider-item {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: absolute;
+}
+
+.slider-item.prev-item,
+.slider-item.active.slide-next {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.slider-item.active.slide-prev,
+.slider-item.next-item {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.slider-item.prev-item.slide-end,
+.slider-item.next-item.slide-end {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.slider-control-prev,
+.slider-control-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 12px 17px;
+  margin: -22px 20px 0 12px;
+  color: #686868;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: transparent;
+  overflow: hidden;
+  font-size: 18px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.slider-control-prev:hover,
+.slider-control-next:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.slider-control-next {
+  right: -7px;
+}
+
+.slide-indicators {
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  list-style: none;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 100px;
 }
 
-.slide-menu .small-banner {
+.slide-indicators .slide-indicator {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 0 5px;
+  background-color: #aaa;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.slide-indicators .active,
+.slide-indicators .slide-indicator:hover {
+  background-color: #b9a16b;
+  height: 10px;
+  width: 10px;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-menu {
+  height: 100vh;
+  width: 100%;
+}
+
+.slide-menu .slider {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-menu .slider .slider-item {
+  padding: 0 50px;
+}
+
+.slide-menu .slider .slider-item > div {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.slide-menu .slider .slide-1 {
+  background: center/cover no-repeat url("../assets/images/curly_hair_girl-1.webp");
+}
+
+.slide-menu .slider .slide-2 {
+  background: center/cover no-repeat url("../assets/images/curly_hair_white-1.webp");
+}
+
+.slide-menu .slider .slide-3 {
+  background: center/cover no-repeat url("../assets/images/monigote.webp");
+}
+
+.slide-menu .slider .small-banner {
   background-color: black;
   color: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   height: 24px;
   border-radius: 3px;
   padding: 0 10px;
@@ -455,14 +630,17 @@ a {
   font-weight: 600;
 }
 
-.slide-menu h2 {
+.slide-menu .slider h2 {
   font-size: 4.2rem;
   font-weight: 400;
 }
 
-.slide-menu a {
+.slide-menu .slider a {
   color: black;
-  position: relative;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  overflow: hidden;
 }
 
 .top-wrapper {
@@ -705,17 +883,14 @@ a {
   padding: 60px 30px;
   color: #282828;
   position: relative;
+  height: 600px;
 }
 
-.fourth-section .testimonial-wrapper {
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.fourth-section .slider {
+  height: 100%;
 }
 
-.fourth-section .testimonial-wrapper h2 {
+.fourth-section .slider .slider-item h2 {
   font-size: 2rem;
   font-weight: 400;
   -webkit-box-ordinal-group: 2;
@@ -723,7 +898,7 @@ a {
           order: 1;
 }
 
-.fourth-section .testimonial-wrapper p {
+.fourth-section .slider .slider-item p {
   font-size: 1.1rem;
   line-height: 1.6;
   font-weight: 400;
@@ -732,7 +907,7 @@ a {
           order: 3;
 }
 
-.fourth-section .testimonial-wrapper .testimonial-img {
+.fourth-section .slider .slider-item .testimonial-img {
   width: 140px;
   height: 140px;
   overflow: hidden;
@@ -743,100 +918,28 @@ a {
           order: 2;
 }
 
-.fourth-section .testimonial-wrapper .img-1 {
+.fourth-section .slider .slider-item .img-1 {
   background-image: url("../assets/images/woman-abstract-b1-150x150.jpg.webp");
 }
 
-.fourth-section .testimonial-wrapper .img-2 {
+.fourth-section .slider .slider-item .img-2 {
   background-image: url("../assets/images/men-shirt-a1-150x150.jpg.webp");
 }
 
-.fourth-section .testimonial-wrapper .testimonial-author {
+.fourth-section .slider .slider-item .testimonial-author {
   -webkit-box-ordinal-group: 5;
       -ms-flex-order: 4;
           order: 4;
 }
 
-.fourth-section .testimonial-wrapper .testimonial-author p {
+.fourth-section .slider .slider-item .testimonial-author p {
   font-size: 1rem;
   margin: 5px;
   font-weight: 600;
 }
 
-.fourth-section .testimonial-wrapper .testimonial-author span {
+.fourth-section .slider .slider-item .testimonial-author span {
   color: #686868;
-}
-
-.fourth-section .prev,
-.fourth-section .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 12px 17px;
-  color: #686868;
-  font-weight: bold;
-  font-size: 18px;
-  -webkit-transition: 0.6s ease;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.fourth-section .prev:hover,
-.fourth-section .next:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-}
-
-.fourth-section .next {
-  right: 16px;
-}
-
-.fourth-section .dot {
-  cursor: pointer;
-  height: 8px;
-  width: 8px;
-  margin: 0 2px;
-  background-color: #aaa;
-  border-radius: 50%;
-  display: inline-block;
-  -webkit-transition: background-color 0.6s ease;
-  transition: background-color 0.6s ease;
-}
-
-.fourth-section .active,
-.fourth-section .dot:hover {
-  background-color: #b9a16b;
-}
-
-.fourth-section .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .fifth-section .fs-wrapper {
@@ -1027,7 +1130,7 @@ footer .sign-up-form .submit-button {
 
 footer .sign-up-form .submit-button:hover {
   opacity: 0.82;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */

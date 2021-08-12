@@ -64,8 +64,7 @@
       </figure>
       <div class="header-rigth-section">
         <a class="right-menu-section d-none d-md-block" href="#">Login</a>
-        <a class="right-menu-section d-none d-md-block" href="#"><i
-            class="fas fa-search d-none d-md-block"></i></a>
+        <a class="right-menu-section d-none d-md-block" href="#"><i class="fas fa-search d-none d-md-block"></i></a>
         <a class="right-menu-section d-none d-md-block" href="#"><i class="far fa-heart"></i></a>
         <a class="right-menu-section" href="#"><i class="fas fa-shopping-cart"></i></a>
       </div>
@@ -122,10 +121,36 @@
   </header>
   <main>
     <section class="slide-menu">
-      <div>
-        <div class="small-banner">SUMMER '19</div>
-        <h2>New Coctail Dresses</h2>
-        <a class="custom-underline" href="#">Shop Now</a>
+      <div class="slider" id="slider-1">
+        <div class="fade slider-item slide-1 active">
+          <div>
+            <div class="small-banner">SUMMER '21</div>
+            <h2>New Coctail Dresses</h2>
+            <a class="custom-underline" href="#">Shop Now</a>
+          </div>
+        </div>
+        <div class="fade slider-item slide-2">
+          <div>
+            <div class="small-banner">SUMMER '21</div>
+            <h2>Night Summer Dresses</h2>
+            <a class="custom-underline" href="#">Shop Now</a>
+          </div>
+        </div>
+        <div class="fade slider-item slide-3">
+          <div>
+            <div class="small-banner">SPRING/SUMMER '21</div>
+            <h2>The Weekend Gateway</h2>
+            <a class="custom-underline" href="#">Browse styles</a>
+          </div>
+        </div>
+        <a class="slider-control-next" role="button">&#10095;</a>
+        <a class="slider-control-prev" role="button">&#10094;</a>
+        <br>
+        <ol class="slide-indicators">
+          <li class="slide-indicator"></li>
+          <li class="slide-indicator"></li>
+          <li class="slide-indicator"></li>
+        </ol>
       </div>
     </section>
     <section class="top-wrapper">
@@ -233,36 +258,40 @@
       </div>
     </section>
     <section class="fourth-section">
-      <div class="slideshow-container">
-        <div class="ta-center testimonial-wrapper fade">
-          <h2>Testimonials</h2>
-          <p>Disrupt single-origin coffee hammock quinoa cronut jean shorts coloring book brooklyn seitan authentic
-            craft
-            beer.</p>
-          <div class="testimonial-img img-1"></div>
-          <div class="testimonial-author">
-            <p>Sarah Connor</p>
-            <span>Author</span>
+      <div class="slider" id="slider-2">
+        <div class="ta-center slider-item fade active">
+          <div>
+            <h2>Testimonials</h2>
+            <p>Disrupt single-origin coffee hammock quinoa cronut jean shorts coloring book brooklyn seitan authentic
+              craft
+              beer.</p>
+            <div class="testimonial-img img-1"></div>
+            <div class="testimonial-author">
+              <p>Sarah Connor</p>
+              <span>Author</span>
+            </div>
           </div>
         </div>
-        <div class="ta-center testimonial-wrapper fade">
-          <h2>Testimonials</h2>
-          <p>Pok pok flannel drinking vinegar, succulents lumbersexual XOXO artisan. Succulents tousled drinking
-            vinegar,
-            cardigan.</p>
-          <div class="testimonial-img img-2"></div>
-          <div class="testimonial-author">
-            <p>Calvin Reeves</p>
-            <span>Actor</span>
+        <div class="ta-center slider-item fade">
+          <div>
+            <h2>Testimonials</h2>
+            <p>Pok pok flannel drinking vinegar, succulents lumbersexual XOXO artisan. Succulents tousled drinking
+              vinegar,
+              cardigan.</p>
+            <div class="testimonial-img img-2"></div>
+            <div class="testimonial-author">
+              <p>Calvin Reeves</p>
+              <span>Actor</span>
+            </div>
           </div>
         </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <a class="slider-control-next" role="button">&#10095;</a>
+        <a class="slider-control-prev" role="button">&#10094;</a>
         <br>
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-        </div>
+        <ol class="slide-indicators">
+          <li class="slide-indicator"></li>
+          <li class="slide-indicator"></li>
+        </ol>
       </div>
     </section>
     <section class="fifth-section">
@@ -428,6 +457,7 @@
     </div>
   </footer>
 
+  <script src="js/slider.js"></script>
   <script src="js/index.js"></script>
 </body>
 
