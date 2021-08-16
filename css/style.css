@@ -1136,4 +1136,47 @@ footer .sign-up-form .submit-button:hover {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+
+.uc-wrapper {
+  height: 100vh;
+  color: #282828;
+}
+
+.uc-wrapper > div {
+  text-align: center;
+  width: 100%;
+}
+
+.uc-wrapper > div .uc-animation {
+  margin: 50px auto;
+  background-color: #f1e8df;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.uc-wrapper > div .uc-animation .slow-ani {
+  margin: -25px -14px 20px -8px;
+}
+
+.uc-wrapper > div .uc-animation .slow-ani .fa-spin {
+  -webkit-animation: fa-spin 7s linear infinite;
+          animation: fa-spin 7s linear infinite;
+}
+
+.uc-wrapper > div .border {
+  height: 1px;
+  background-color: #ebebeb;
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */

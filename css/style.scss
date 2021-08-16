@@ -899,3 +899,35 @@ footer {
     }
   }
 }
+.uc-wrapper {
+  height: 100vh;
+  color: #282828;
+  & > div {
+    text-align: center;
+    width: 100%;
+    .uc-animation {
+      margin: 50px auto;
+      background-color: #f1e8df;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      .slow-ani {
+        margin: -25px -14px 20px -8px;
+
+        .fa-spin {
+          animation: fa-spin 7s linear infinite;
+        }
+      }
+    }
+    .border {
+      height: 1px;
+      background-color: #ebebeb;
+      width: 100%;
+    }
+  }
+}

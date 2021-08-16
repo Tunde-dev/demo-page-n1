@@ -31,10 +31,10 @@ class Slider {
     this.nextBtn.addEventListener("click", () => {
       this.next();
     });
-    this.slider.addEventListener('mouseover', () => {
+    this.slider.addEventListener('mouseenter', () => {
       clearInterval(this.autoStartInterval);
     });
-    this.slider.addEventListener('mouseout', () => {
+    this.slider.addEventListener('mouseleave', () => {
       this.autoStart();
     });
   }
